@@ -38,7 +38,6 @@ public class UsuariosController {
 	}
 	
 	
-	
 	@GetMapping("/eliminar")
 	public String eliminarCategoria(Usuario usuario, RedirectAttributes model) {
 		if(usuario.getId() != null) {
@@ -46,7 +45,7 @@ public class UsuariosController {
 			model.addFlashAttribute("msg", "Usuario Eliminado");
 		} 
 		
-		return "redirect:/usuarios/listaUusarios";
+		return "redirect:/usuarios/listaUsuarios";
 		
 	}
 }
