@@ -53,5 +53,11 @@ public class UsuarioServiceJpa implements IntServiceUsuario{
 	public Page<Usuario> buscarTodas(Pageable page) {
 		return repoUsuarios.findAll(page);
 	}
+	
+	@Override
+	public int totalUsuarios() {
+		// TODO Auto-generated method stub
+		return (int) repoUsuarios.count();
+	}
 
 }

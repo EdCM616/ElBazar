@@ -14,5 +14,5 @@ public interface IntServiceUsuario {
 	public void eliminar (Integer idUsuario);
 	public int numeroUsuario();
 	Page<Usuario>buscarTodas(Pageable page);
-
+	public int totalUsuarios();
 }
