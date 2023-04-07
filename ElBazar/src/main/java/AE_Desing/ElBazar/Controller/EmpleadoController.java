@@ -1,22 +1,38 @@
 package AE_Desing.ElBazar.Controller;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
 
-@RequestMapping("/empleados")
-@Controller
+
+
+//@RequestMapping("/empleados")
+//@Controller
 public class EmpleadoController {
 
-	
 	/*@Autowired
-	public IntServiceEmpleados serviceEmpleados;
-
+	private IntServiceEmpleado serviceEmpleados;
+	
+	
 	@GetMapping("/index")
 	public String mostrarIndex(Model model) {
-		model.addAttribute("usuarios", serviceEmpleados.obtenerEmpleados());
-		return "empleados/listaEmpleados";
+		List<Usuario> lista = serviceUsuarios.obtenerUsuario();
+		model.addAttribute("usuarios", lista);
+		model.addAttribute("total", serviceEmpleados.totalEmpleados());
+		for(Usuario u : lista) {
+			System.out.println(u);
+		}
+		
+		return "usuarios/listaUsuarios";
+		
+	}
+	
+	
+	@GetMapping("/eliminar")
+	public String eliminarEmpleado(Empleado empleado, RedirectAttributes model) {
+		if(empleado.getId() != null) {
+			serviceEmpleados.eliminar(empleado.getId());
+			model.addFlashAttribute("msg", "Empleado Eliminado");
+		} 
+		
+		return "redirect:/empleados/listaEmpleados";
+		
 	}*/
 }
